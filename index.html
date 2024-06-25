@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,1.0">
+    <title>Estruturas de Dados - Michel</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    <div class="container mt-4">
+        <!-- Lista Ligada -->
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h1>Lista Ligada Simples</h1>
+                <div id="controls" class="form-inline justify-content-center">
+                    <label for="data" class="mr-2">Valor:</label>
+                    <input type="text" id="data" class="form-control mr-2">
+                    <button class="btn btn-primary mr-2" onclick="insertAtBeginning()">Inserir no Início</button>
+                    <button class="btn btn-primary mr-2" onclick="insertAtEnd()">Inserir no Fim</button>
+                    <button class="btn btn-danger mr-2" onclick="removeFromBeginning()">Remover do Início</button>
+                    <button class="btn btn-danger" onclick="removeFromEnd()">Remover do Fim</button>
+                </div>
+                <div id="linked-list" class="d-flex justify-content-center"></div>
+                <div id="status" class="text-info text-center"></div>
+            </div>
+        </div>
+        
+        <hr>
+
+        <!-- Grafo -->
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h1>Grafo</h1>
+                <div class="graph-control form-inline justify-content-center">
+                    <label for="vertex" class="mr-2">Inserir Vértice:</label>
+                    <input type="text" id="vertex" class="form-control mr-2">
+                    <button class="btn btn-primary mr-2" onclick="insertVertex()">Inserir</button>
+                    <label for="remove-vertex" class="mr-2">Remover Vértice:</label>
+                    <input type="text" id="remove-vertex" class="form-control mr-2">
+                    <button class="btn btn-danger" onclick="removeVertex()">Remover</button>
+                </div>
+                <div class="graph-control form-inline justify-content-center">
+                    <label for="edge-from" class="mr-2">Inserir Aresta De:</label>
+                    <input type="text" id="edge-from" class="form-control mr-2">
+                    <label for="edge-to" class="mr-2">Para:</label>
+                    <input type="text" id="edge-to" class="form-control mr-2">
+                    <label for="edge-weight" class="mr-2">Peso:</label>
+                    <input type="text" id="edge-weight" class="form-control mr-2">
+                    <button class="btn btn-primary mr-2" onclick="insertEdge()">Inserir</button>
+                </div>
+                <div class="graph-control form-inline justify-content-center">
+                    <label for="remove-edge-from" class="mr-2">Remover Aresta De:</label>
+                    <input type="text" id="remove-edge-from" class="form-control mr-2">
+                    <label for="remove-edge-to" class="mr-2">Para:</label>
+                    <input type="text" id="remove-edge-to" class="form-control mr-2">
+                    <button class="btn btn-danger" onclick="removeEdge()">Remover</button>
+                </div>
+                <canvas id="graph-canvas" class="graph-canvas" width="800" height="500"></canvas>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- Árvore Binária -->
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h1>Árvore Binária</h1>
+                <div class="tree-control form-inline justify-content-center">
+                    <label for="tree-node" class="mr-2">Inserir Nó:</label>
+                    <input type="text" id="tree-node" class="form-control mr-2">
+                    <button class="btn btn-primary mr-2" onclick="insertTreeNode()">Inserir</button>
+                    <label for="remove-tree-node" class="mr-2">Remover Nó:</label>
+                    <input type="text" id="remove-tree-node" class="form-control mr-2">
+                    <button class="btn btn-danger" onclick="removeTreeNode()">Remover</button>
+                </div>
+                <canvas id="tree-canvas" class="tree-canvas" width="800" height="500"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js">
+    </script>
+</body>
+</html>
